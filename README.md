@@ -1,2 +1,2 @@
-# springboot-jedis-mybatis
-springboot-jedis-mybatis
+# 学习管理系统后台
+springboot + mybatis
