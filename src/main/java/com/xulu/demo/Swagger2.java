@@ -22,21 +22,21 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.wolves.tolink.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.xulu.demo"))
                 .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(false);
 
     }
     private ApiInfo apiInfo() {
-        Contact contact = new Contact(" AngryWolves ", "https://github.com/AngryWolves", "java_xul@163.com");
-        ApiInfo apiInfo = new ApiInfo("AngryWolves APIs",
+        Contact contact = new Contact(" xulu ", "https://github.com/xulu163", "java_xul@163.com");
+        ApiInfo apiInfo = new ApiInfo("jdeis-demo APIs",
                         "",
                 "1.0",
-                "https://github.com/AngryWolves",
+                "https://github.com/xulu163",
                 contact,
-                "AngryWolves",
-                "https://github.com/AngryWolves"
+                "xulu",
+                "https://github.com/xulu163"
         );
         return apiInfo;
     }

@@ -7,9 +7,9 @@ spring:
     application:
         name: bees
     datasource:
-        url: jdbc:mysql://localhost/demo2?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
+        url: jdbc:mysql://47.98.54.210/demo2?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
         username: root
-        password: xxxxx
+        password: a123456
         driver-class-name: com.mysql.jdbc.Driver
         initial-size: 20
         max-active: 100
@@ -20,8 +20,8 @@ spring:
         validationQuery: SELECT 1
     redis:
         database: 0
-        host: localhost
-        port: 6397
+        host: 192.168.1.5
+        port: 7000
         password: ''
         timeout: 10000
         jedis:

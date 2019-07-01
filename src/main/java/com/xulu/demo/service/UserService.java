@@ -4,6 +4,8 @@ import com.xulu.demo.entity.User;
 import com.xulu.demo.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -16,7 +18,8 @@ public class UserService {
     private UserMapper userMapper;
 
     public void save(User user){
-        userMapper.insertUseGeneratedKeys(user);
+        user.setCreateDate(new Date());
+        userMapper.insert(user);
     }
 
     public User selectById(Integer id){
@@ -24,6 +27,7 @@ public class UserService {
     }
 
     public void update(User user){
+        user.setUpdateDate(new Date());
         userMapper.updateByPrimaryKey(user);
     }
 

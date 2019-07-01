@@ -6,8 +6,8 @@
     select
       id
     from `user`
-    limits(#{start, jdbcType=INTEGER}, #{limit, jdbcType=INTEGER})
     order by id asc
+    limit #{start, jdbcType=INTEGER}, #{limit, jdbcType=INTEGER}
   </select>
 
 
@@ -15,7 +15,7 @@
     select
       count(1)
     from `user`
-    limits(#{start, jdbcType=INTEGER}, #{limit, jdbcType=INTEGER})
     order by id asc
+    limit #{start, jdbcType=INTEGER}, #{limit, jdbcType=INTEGER}
   </select>
 </mapper>
